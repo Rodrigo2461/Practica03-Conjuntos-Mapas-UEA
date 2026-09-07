@@ -6,7 +6,7 @@
 **Guía de Prácticas del Componente Práctico-Experimental:** Nº 03  
 **Unidad III:** Conjuntos y Mapas (Semanas 9-10-11-12)  
 **Título de la Práctica:** Guía de Prácticas #03: Implementación de conjuntos y mapas  
-**Estudiante:** Miguel Rodrigo Cahuasqui Haro  
+**Estudiante:** Miguel Rodrigo Cahuasqui Hernández  
 **Docente:** Ing. Walter Zambrano Romero, Mg.  
 
 ---
@@ -151,36 +151,49 @@ En cumplimiento con las directrices académicas y de integridad de la **Universi
   - Estructuración de la documentación técnica y formato LaTeX conforme a las directrices de la guía.
 - **Porcentaje Aproximado de Asistencia:**
   - **85%** asistido por el agente de Inteligencia Artificial (codificación base, algoritmos de benchmarking, suite de pruebas y documentación).
-  - **15%** autoría, validación lógica, especificación de requerimientos institucionales amazónicos y verificación funcional ejecutada por el estudiante **Miguel Rodrigo Cahuasqui Haro**.
+  - **15%** autoría, validación lógica, especificación de requerimientos institucionales amazónicos y verificación funcional ejecutada por el estudiante **Miguel Rodrigo Cahuasqui Hernández**.
 
 ---
 
-## 8. Guía de Instalación y Ejecución
+## 8. Guía de Ejecución Paso a Paso y Evidencias (Anexos)
 
 ### Requisitos Previos:
 - Python 3.10 o superior instalado (`python3 --version`).
 - Git instalado y configurado.
 
-### 1. Clonar el repositorio:
+### Paso 1: Clonar el repositorio y acceder al proyecto
 ```bash
 git clone https://github.com/Rodrigo2461/Practica03-Conjuntos-Mapas-UEA.git
 cd Practica03-Conjuntos-Mapas-UEA
 ```
 
-### 2. Ejecutar la aplicación interactiva:
-```bash
-python3 main.py
-```
-
-### 3. Ejecutar la suite de pruebas unitarias:
+### Paso 2: Ejecutar la suite de pruebas unitarias automatizadas (9/9 OK)
+Valida la integridad de las operaciones de conjuntos (unión, intersección, diferencia, diferencia simétrica, subconjuntos) y mapas:
 ```bash
 python3 -m unittest discover -s tests -v
 ```
 
-### 4. Ejecutar únicamente el módulo de benchmarking:
+### Paso 3: Ejecutar el análisis empírico de rendimiento temporal (Benchmarking Big-O)
+Mide los tiempos en microsegundos demostrando la ventaja de las tablas hash ($\mathcal{O}(1)$) frente a las búsquedas lineales en listas ($\mathcal{O}(n)$):
 ```bash
 python3 src/benchmark.py
 ```
+
+### Paso 4: Ejecutar el menú interactivo con datos precargados
+Inicia el sistema interactivo de consola con clubes y jugadores representativos de la Amazonía ecuatoriana:
+```bash
+python3 main.py
+```
+
+---
+
+### Evidencias Gráficas del Entorno de Ejecución (Anexos)
+
+#### Figura 1: Entorno de compilación, ejecución de pruebas unitarias y benchmarking Big-O
+![Entorno de Compilación y Benchmarking](FORMATOO/anexo_compilacion.png)
+
+#### Figura 2: Ejecución del menú interactivo, panel de control, tabla de posiciones y auditoría
+![Ejecución del Menú y Reportería](FORMATOO/anexo_ejecucion.png)
 
 ---
 

@@ -2,7 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-tabla]{babel}
-\usepackage[margin=2cm]{geometry}
+\usepackage[margin=1.8cm,top=1.8cm,bottom=1.8cm]{geometry}
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage{xcolor}
@@ -14,26 +14,14 @@
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{mathptmx}
-\usepackage{listings}
 \usepackage{hyperref}
-
-% Configuración de listings para código Python
-\lstset{
-  basicstyle=\ttfamily\footnotesize,
-  breaklines=true,
-  frame=single,
-  keywordstyle=\color{blue}\bfseries,
-  commentstyle=\color{gray}\itshape,
-  stringstyle=\color{teal},
-  showstringspaces=false
-}
 
 % --- FONDO DE PANTALLA (MARCA DE AGUA) ---
 \usepackage{background}
 
 \backgroundsetup{
   contents={\includegraphics[width=13cm,keepaspectratio]{logo-fondo.png}},
-  opacity=0.10,
+  opacity=0.08,
   scale=1,
   angle=0,
   placement=center
@@ -47,36 +35,35 @@
 % =========================================================
 
 \begin{center}
-    \includegraphics[width=3.2cm,keepaspectratio]{logo-fondo.png}\\[1.5ex]
+    \includegraphics[width=2.8cm,keepaspectratio]{logo-fondo.png}\\[1ex]
     
-    {\Huge \textbf{UNIVERSIDAD ESTATAL AMAZÓNICA}}\\[1.5ex]
-    {\Large \textbf{Unidad de Organización Curricular:} \textcolor{gray}{Básica}} \\[0.8ex]
-    {\Large \textbf{Campo de Estudio:} \textcolor{gray}{Tronco común}}
+    {\huge \textbf{UNIVERSIDAD ESTATAL AMAZÓNICA}}\\[1ex]
+    {\large \textbf{Unidad de Organización Curricular:} \textcolor{gray}{Básica}} \hspace{1cm}
+    {\large \textbf{Campo de Estudio:} \textcolor{gray}{Tronco común}}
 \end{center}
 
-\vspace{0.2cm}
+\vspace{-0.2cm}
 
 % =========================================================
 % TABLA DE DATOS GENERALES
 % =========================================================
 
 \bgroup
-\def\arraystretch{1.4}
+\def\arraystretch{1.3}
 
 \noindent
-\begin{tabular}{|p{11.5cm}|p{4.5cm}|}
+\begin{tabular}{|p{12.2cm}|p{4.2cm}|}
 \hline
 
 \rowcolor{green!15}
-\multicolumn{2}{|>{\centering\arraybackslash}p{16cm}|}{
-    \textbf{INFORME DE PRÁCTICAS DEL COMPONENTE PRÁCTICO-} \newline
-    \textbf{EXPERIMENTAL}
+\multicolumn{2}{|>{\centering\arraybackslash}p{16.8cm}|}{
+    \textbf{INFORME DE PRÁCTICAS DEL COMPONENTE PRÁCTICO-EXPERIMENTAL}
 } \\
 
 \hline
 
 \multicolumn{2}{|l|}{
-    \textbf{Nombre(s) del(de los) Estudiante(s):} Miguel Rodrigo Cahuasqui Haro
+    \textbf{Nombre(s) del(de los) Estudiante(s):} Miguel Rodrigo Cahuasqui Hernández
 } \\
 
 \hline
@@ -108,16 +95,16 @@
 
 \end{tabular}
 
-\vspace{-1.4pt}
+\vspace{-1.2pt}
 
 % =========================================================
-% CUERPO PRINCIPAL DEL INFORME
+% CUERPO PRINCIPAL DEL INFORME (SIN ESPACIOS EN BLANCO)
 % =========================================================
 
 \noindent
 \begin{longtable}{
-    |>{\bfseries\centering\arraybackslash}p{3.5cm}|
-    >{\setlength{\parindent}{0cm}\setstretch{1.2}}p{12.5cm}|
+    |>{\bfseries\centering\arraybackslash}p{3.2cm}|
+    >{\setlength{\parindent}{0cm}\setstretch{1.12}}p{13.2cm}|
 }
 
 \hline
@@ -133,7 +120,7 @@
 \endlastfoot
 
 % =========================================================
-% INTRODUCCIÓN
+% INTRODUCCIÓN (INICIA DE INMEDIATO EN LA HOJA 1)
 % =========================================================
 
 Introducción
@@ -142,10 +129,15 @@ Introducción
 En el diseño y construcción de sistemas informáticos de alto rendimiento, la selección rigurosa de los Tipos Abstractos de Datos (TAD) es un factor determinante para garantizar escalabilidad, eficiencia computacional e integridad en la manipulación de información. La asignatura de Estructura de Datos profundiza en los mecanismos fundamentales para organizar y consultar colecciones con tiempos de respuesta óptimos (Cormen et al., 2022).
 
 Las estructuras lineales convencionales (como listas contiguas o enlazadas) presentan un costo temporal de búsqueda y eliminación que escala linealmente $\mathcal{O}(n)$, obligando al procesador a iterar de manera exhaustiva elemento por elemento. Frente a este desafío, la teoría y aplicación de tablas hash permite la creación de \textbf{Conjuntos (\texttt{set})} y \textbf{Mapas o Diccionarios (\texttt{dict})}, los cuales logran un costo de acceso, inserción y verificación de pertenencia en tiempo constante amortizado $\mathcal{O}(1)$ (Goodrich et al., 2023; Weiss, 2021).
+\\
 
+\hline
+
+&
+\textbf{2. Marco Conceptual y Selección del Problema:}\newline
 Un conjunto es una colección no ordenada de elementos únicos e inmutables (hasheables) que implementa operaciones algebraicas de la teoría de conjuntos: unión ($A \cup B$), intersección ($A \cap B$), diferencia ($A - B$), diferencia simétrica ($A \triangle B$) y verificación de subconjuntos ($X \subseteq A$). Por su parte, un mapa es una estructura asociativa que mapea una clave primaria única a un valor o registro de datos (Lutz, 2021).
 
-En la presente práctica se selecciona el problema: \textbf{"Aplicación para el registro de jugadores y equipos en un torneo de fútbol"} (Torneo de Fútbol Amazónico UEA 2026), modelando la gestión integral de plantillas, auditoría de doble inscripción, control disciplinario y tabla de posiciones.
+En la presente práctica se selecciona el problema: \textbf{"Aplicación para el registro de jugadores y equipos en un torneo de fútbol"} (Torneo de Fútbol Amazónico UEA 2026), modelando la gestión integral de plantillas, auditoría de doble inscripción, control disciplinario y tabla de posiciones de clubes de la región amazónica ecuatoriana.
 \\
 
 \hline
@@ -156,10 +148,10 @@ En la presente práctica se selecciona el problema: \textbf{"Aplicación para el
 
 Desarrollo o procedimiento
 &
-\textbf{2. Escenarios y Actividades Desarrolladas:}\newline
+\textbf{3. Escenarios y Actividades Desarrolladas:}\newline
 Las actividades se ejecutaron en un ambiente de escritorio (computador personal con sistema operativo Linux, entorno Python 3.12 y control de versiones Git/GitHub CLI).
 
-\textbf{2.1. Arquitectura Modular del Sistema:}\newline
+\textbf{3.1. Arquitectura Modular del Sistema:}\newline
 Se diseñó una solución desacoplada en cuatro módulos principales:
 \begin{itemize}
     \item \textbf{\texttt{models.py}:} Define las entidades \texttt{Jugador} (con clave primaria cédula hasheable), \texttt{Equipo} (con conjunto \texttt{jugadores\_ids}) y \texttt{Partido}.
@@ -168,21 +160,25 @@ Se diseñó una solución desacoplada en cuatro módulos principales:
     \item \textbf{\texttt{benchmark.py}:} Módulo científico que mide experimentalmente los tiempos de ejecución de listas vs. conjuntos y mapas.
 \end{itemize}
 
-\textbf{2.2. Implementación de Operaciones de Teoría de Conjuntos:}\newline
+\textbf{3.2. Implementación de Operaciones de Teoría de Conjuntos:}\newline
 \begin{enumerate}
     \item \textbf{Diferencia ($A - B$):} Cálculo de jugadores habilitados para disputar una fecha deportiva mediante la sustracción de la nómina y los sancionados: $\text{Habilitados} = \text{Plantilla} - \text{Sancionados}$.
     \item \textbf{Intersección ($A \cap B$):} Auditoría automática de doble fichaje, verificando que la intersección de nóminas entre cualquier par de clubes sea vacía ($\emptyset$).
     \item \textbf{Unión ($A \cup B$):} Consolidación del padrón total de atletas participantes en un grupo regional sin duplicados.
     \item \textbf{Diferencia Simétrica ($A \triangle B$):} Comparativa analítica de futbolistas no compartidos entre dos instituciones.
-    \item \textbf{Subconjunto ($X \subseteq A$):} Validación estricta de convocatorias y alineaciones previas al pitazo inicial.
+    \item \textbf{Subconjunto ($X \subseteq A$):} Validación estricta de convocatorias y alineaciones previas al pitazo inicial, exigiendo que la nómina en cancha sea subconjunto de la oficial y disjunta con los sancionados.
 \end{enumerate}
+\\
 
-\textbf{2.3. Declaración de Agente de Inteligencia Artificial:}\newline
-Conforme a los lineamientos de la guía docente:
+\hline
+
+&
+\textbf{3.3. Declaración de Agente de Inteligencia Artificial:}\newline
+Conforme a los lineamientos obligatorios de la guía docente:
 \begin{itemize}
     \item \textbf{Agente de IA utilizado:} Google Antigravity (motorizado por Gemini 3.8 Flash).
-    \item \textbf{Descripción:} Asistente de programación por pares utilizado para la estructuración arquitectónica del proyecto, diseño del benchmark comparativo Big-O, elaboración de la suite de 9 pruebas unitarias automatizadas y redacción técnica preliminar.
-    \item \textbf{Porcentaje estimado:} 85\% asistencia del agente de IA en código base, algoritmos de benchmarking y pruebas; 15\% especificación contextual del problema amazónico, parametrización de reglas deportivas, depuración y validación por parte del estudiante Miguel Rodrigo Cahuasqui Haro.
+    \item \textbf{Descripción del empleo:} Asistente de programación por pares utilizado para la estructuración arquitectónica del proyecto, diseño del benchmark comparativo Big-O, elaboración de la suite de 9 pruebas unitarias automatizadas y redacción técnica preliminar.
+    \item \textbf{Porcentaje estimado:} 85\% asistencia del agente de IA en código base, algoritmos de benchmarking y pruebas; 15\% especificación contextual del problema amazónico, parametrización de reglas deportivas, depuración y validación por parte del estudiante Miguel Rodrigo Cahuasqui Hernández.
 \end{itemize}
 \\
 
@@ -194,12 +190,12 @@ Conforme a los lineamientos de la guía docente:
 
 Resultados
 &
-\textbf{3. Resultados Obtenidos y Análisis de Rendimiento:}\newline
+\textbf{4. Resultados Obtenidos y Análisis de Rendimiento:}\newline
 
-\textbf{3.1. Pruebas Unitarias Automatizadas:}\newline
+\textbf{4.1. Pruebas Unitarias Automatizadas:}\newline
 Se ejecutó la suite completa de pruebas unitarias en \texttt{tests/test\_torneo.py}, validando el 100\% de las funcionalidades (9 pruebas ejecutadas y aprobadas en 0.005 segundos).
 
-\textbf{3.2. Medición Experimental de Tiempos de Ejecución (Benchmarking):}\newline
+\textbf{4.2. Medición Experimental de Tiempos de Ejecución (Benchmarking):}\newline
 Se evaluó el tiempo de búsqueda del operador \texttt{in} sobre colecciones sintéticas de diferentes tamaños $N$, promediando 500 iteraciones aleatorias:
 
 \begin{center}
@@ -217,7 +213,7 @@ Se evaluó el tiempo de búsqueda del operador \texttt{in} sobre colecciones sin
 \end{tabular}
 \end{center}
 
-\textbf{3.3. Tiempos de Operaciones de Conjuntos ($N = 50,000$ elementos):}\newline
+\textbf{4.3. Tiempos de Operaciones de Conjuntos ($N = 50,000$ elementos):}\newline
 \begin{itemize}
     \item Unión ($A \cup B$): 7.24 ms
     \item Intersección ($A \cap B$): 5.44 ms
@@ -225,7 +221,7 @@ Se evaluó el tiempo de búsqueda del operador \texttt{in} sobre colecciones sin
     \item Diferencia Simétrica ($A \triangle B$): 3.50 ms
 \end{itemize}
 
-\textbf{3.4. Análisis de Ventajas y Desventajas:}\newline
+\textbf{4.4. Análisis de Ventajas y Desventajas:}\newline
 \textbf{Ventajas:} Búsqueda instantánea $\mathcal{O}(1)$, garantía de unicidad sin comprobaciones manuales, sintaxis concisa y expresiva.\newline
 \textbf{Desventajas:} Mayor consumo de memoria RAM debido al factor de carga de las tablas hash y obligatoriedad de que los elementos sean inmutables (hasheables).
 \\
@@ -238,12 +234,12 @@ Se evaluó el tiempo de búsqueda del operador \texttt{in} sobre colecciones sin
 
 Conclusiones y Recomendaciones
 &
-\textbf{4. Conclusiones:}\newline
+\textbf{5. Conclusiones:}\newline
 1. La implementación de Conjuntos (\texttt{set}) y Mapas (\texttt{dict}) resolvió eficazmente las operaciones críticas de un torneo de fútbol, reduciendo la complejidad temporal de búsqueda de $\mathcal{O}(n)$ a $\mathcal{O}(1)$.\newline
 2. El análisis de benchmarking demostró empíricamente que a partir de $N = 100,000$ elementos, los conjuntos superan a las listas por más de \textbf{3,200 veces en velocidad}, confirmando los fundamentos teóricos de la asignatura.\newline
 3. El uso formal del álgebra de conjuntos facilitó la auditoría reglamentaria (intersección) y el control de suspensiones (diferencia) con una sintaxis limpia y robusta.\newline
 
-\textbf{5. Recomendaciones:}\newline
+\textbf{6. Recomendaciones:}\newline
 1. Se aconseja persistir los datos en bases de datos NoSQL o serializadores JSON para preservar el estado del torneo tras el cierre de la aplicación.\newline
 2. Monitorear el consumo de memoria en entornos con recursos limitados debido al espacio adicional requerido por las tablas hash.
 \\
@@ -280,12 +276,32 @@ Anexos
 \textbf{Enlace al Repositorio Oficial en GitHub:}\newline
 \url{https://github.com/Rodrigo2461/Practica03-Conjuntos-Mapas-UEA}\newline
 
-\textbf{Evidencias de Funcionamiento del Sistema:}\newline
-\begin{itemize}
-    \item \textbf{Código Fuente Completo:} Estructurado bajo estándar PEP 8 en los módulos \texttt{models.py}, \texttt{gestor\_torneo.py}, \texttt{reporteria.py} y \texttt{benchmark.py}.
-    \item \textbf{Ejecución de Pruebas:} 9 pruebas unitarias aprobadas exitosamente con el comando \texttt{python3 -m unittest discover -s tests}.
-    \item \textbf{Demostración de Menú Interactivo:} 12 opciones funcionales que cubren registro, transferencias, auditoría de doble fichaje y tabla de posiciones.
-\end{itemize}
+\textbf{Guía Paso a Paso de Ejecución del Sistema:}\newline
+\begin{enumerate}
+    \item \textbf{Paso 1: Clonación y Preparación:} Descargar el proyecto desde GitHub y verificar versión de Python 3.10+:
+    \newline \texttt{git clone https://github.com/Rodrigo2461/Practica03-Conjuntos-Mapas-UEA.git}
+    \item \textbf{Paso 2: Ejecución de Pruebas Unitarias:} Comprobar que los 9 casos de prueba automatizados se ejecuten satisfactoriamente:
+    \newline \texttt{python3 -m unittest discover -s tests -v}
+    \item \textbf{Paso 3: Análisis Empírico de Rendimiento:} Ejecutar el módulo de benchmarking para verificar la aceleración $\mathcal{O}(1)$ vs $\mathcal{O}(n)$:
+    \newline \texttt{python3 src/benchmark.py}
+    \item \textbf{Paso 4: Puesta en Marcha del Sistema Interactivo:} Iniciar la consola interactiva con precarga de clubes amazónicos:
+    \newline \texttt{python3 main.py}
+\end{enumerate}
+
+\vspace{0.3cm}
+\textbf{Figura 1:} \textit{Captura del entorno de compilación, ejecución de pruebas unitarias y benchmarking de rendimiento Big-O.}\newline
+\begin{center}
+\includegraphics[width=12.2cm,keepaspectratio]{anexo_compilacion.png}
+\end{center}
+\\
+
+\hline
+
+&
+\textbf{Figura 2:} \textit{Captura de la ejecución del sistema interactivo, panel de control, tabla de posiciones y auditoría de conjuntos.}\newline
+\begin{center}
+\includegraphics[width=12.2cm,keepaspectratio]{anexo_ejecucion.png}
+\end{center}
 \\
 
 \hline
@@ -295,33 +311,35 @@ Anexos
 \egroup
 
 % =========================================================
-% ESPACIO PARA LA FIRMA
+% ESPACIO PARA LA FIRMA (SIN C.I.)
 % =========================================================
 
-\vspace{0.8cm}
+\vspace{0.4cm}
 
 \begin{center}
 
 \begin{tabular}{|c|}
 \hline
 
-\vspace{0.2cm}
+\vspace{0.15cm}
 
 \hspace{3cm}
-\includegraphics[width=6.5cm,keepaspectratio]{FIRMAMIGUELCAHUASQUI.png}
+\includegraphics[width=5.8cm,keepaspectratio]{FIRMAMIGUELCAHUASQUI.png}
 \hspace{3cm}
 
-\vspace{0.2cm}
+\vspace{0.15cm}
 \\
 
 \hline
 
-\textbf{Firma del estudiante: Miguel Rodrigo Cahuasqui Haro}
+\textbf{Firma del estudiante}
 \\
 
-\vspace{0.2cm}
-\textbf{C.I.: 1600860955 | Estudiante UEA}
-\vspace{0.2cm}
+\textbf{Miguel Rodrigo Cahuasqui Hernández}
+\\
+
+\textit{Estudiante de Tecnologías de la Información - UEA}
+\vspace{0.15cm}
 \\
 
 \hline
