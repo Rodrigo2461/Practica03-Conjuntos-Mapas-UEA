@@ -97,7 +97,7 @@ def main():
     crear_captura_terminal(
         "Terminal UEA - Entorno de Compilación, Pruebas Unitarias y Benchmarking",
         lineas_compilacion,
-        "FORMATOO/anexo_compilacion.png",
+        "assets/anexo_compilacion.png",
         ancho=1150,
         alto=720
     )
@@ -135,7 +135,7 @@ def main():
     crear_captura_terminal(
         "Terminal UEA - Ejecución del Menú Principal, Reportería y Operaciones de Conjuntos",
         lineas_ejecucion,
-        "FORMATOO/anexo_ejecucion.png",
+        "assets/anexo_ejecucion.png",
         ancho=1150,
         alto=720
     )

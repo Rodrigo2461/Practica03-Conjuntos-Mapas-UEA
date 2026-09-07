@@ -10,7 +10,4 @@ htmlcov/
 *.out
 *.synctex.gz
 .DS_Store
-FORMATOO/*.aux
-FORMATOO/*.log
-FORMATOO/*.out
-FORMATOO/*.synctex.gz
+FORMATOO/

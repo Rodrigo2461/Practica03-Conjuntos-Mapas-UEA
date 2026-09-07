@@ -190,10 +190,10 @@ python3 main.py
 ### Evidencias Gráficas del Entorno de Ejecución (Anexos)
 
 #### Figura 1: Entorno de compilación, ejecución de pruebas unitarias y benchmarking Big-O
-![Entorno de Compilación y Benchmarking](FORMATOO/anexo_compilacion.png)
+![Entorno de Compilación y Benchmarking](assets/anexo_compilacion.png)
 
 #### Figura 2: Ejecución del menú interactivo, panel de control, tabla de posiciones y auditoría
-![Ejecución del Menú y Reportería](FORMATOO/anexo_ejecucion.png)
+![Ejecución del Menú y Reportería](assets/anexo_ejecucion.png)
 
 ---
 
