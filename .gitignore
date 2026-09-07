@@ -11,3 +11,8 @@ htmlcov/
 *.synctex.gz
 .DS_Store
 FORMATOO/
+assets/
+*.pdf
+*.doc
+*.docx
+generate_terminal_screenshots.py

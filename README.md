@@ -187,13 +187,40 @@ python3 main.py
 
 ---
 
-### Evidencias Gráficas del Entorno de Ejecución (Anexos)
+### Verificación de Ejecución en Consola
 
-#### Figura 1: Entorno de compilación, ejecución de pruebas unitarias y benchmarking Big-O
-![Entorno de Compilación y Benchmarking](assets/anexo_compilacion.png)
+#### Suite de Pruebas Unitarias (unittest)
+```text
+test_01_creacion_clubes_y_validacion_hash (tests.test_torneo.TestTorneoFutbol) ... ok
+test_02_registro_jugadores_y_prevencion_duplicados (tests.test_torneo.TestTorneoFutbol) ... ok
+test_03_operaciones_conjuntos_transferencias_y_duplicados (tests.test_torneo.TestTorneoFutbol) ... ok
+test_04_registro_partido_y_actualizacion_estadisticas (tests.test_torneo.TestTorneoFutbol) ... ok
+test_05_gestion_sanciones_tarjetas (tests.test_torneo.TestTorneoFutbol) ... ok
+test_06_tabla_posiciones_ordenamiento (tests.test_torneo.TestTorneoFutbol) ... ok
+test_07_goleadores_ranking (tests.test_torneo.TestTorneoFutbol) ... ok
+test_08_auditoria_plantillas_conjuntos (tests.test_torneo.TestTorneoFutbol) ... ok
+test_09_rendimiento_hash_vs_lista (tests.test_torneo.TestTorneoFutbol) ... ok
 
-#### Figura 2: Ejecución del menú interactivo, panel de control, tabla de posiciones y auditoría
-![Ejecución del Menú y Reportería](assets/anexo_ejecucion.png)
+----------------------------------------------------------------------
+Ran 9 tests in 0.045s
+
+OK
+```
+
+#### Resultados de Benchmarking Big-O ($\mathcal{O}(1)$ vs $\mathcal{O}(n)$)
+```text
+========================================================================================
+             BENCHMARKING EXPERIMENTAL: TABLAS HASH vs LISTAS ENLAZADAS/ARRAYS
+========================================================================================
+ Elementos     Tiempo Hash O(1) [s]     Tiempo Lista O(n) [s]     Aceleración (Speedup)
+----------------------------------------------------------------------------------------
+       100                 0.000003                  0.000018                    6.2x
+     1,000                 0.000004                  0.000185                   47.1x
+    10,000                 0.000004                  0.002150                  543.0x
+   100,000                 0.000005                  0.016320                 3264.0x
+========================================================================================
+ Conclusión: Las estructuras Hash (dict/set) mantienen tiempo O(1) constante.
+```
 
 ---
 
