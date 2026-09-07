@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+htmlcov/
+*.aux
+*.log
+*.out
+*.synctex.gz
+.DS_Store
+FORMATOO/*.aux
+FORMATOO/*.log
+FORMATOO/*.out
+FORMATOO/*.synctex.gz

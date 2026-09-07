@@ -1,0 +1,4 @@
+# Dependencias del proyecto
+# Este proyecto está desarrollado utilizando la librería estándar de Python 3.10+ (cero dependencias obligatorias).
+# Para formateo de tablas o análisis adicional opcional:
+# colorama>=0.4.6
